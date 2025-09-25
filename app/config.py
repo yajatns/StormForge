@@ -37,6 +37,11 @@ class Settings:
         self.max_concurrent_jobs: int = int(os.getenv("MAX_CONCURRENT_JOBS", "10"))
         self.default_timeout: int = int(os.getenv("DEFAULT_TIMEOUT", "30"))
         self.max_targets_per_job: int = 100
+        
+        # Network Security
+        self.default_blocked_ranges: List[str] = ["127.0.0.0/8", "169.254.0.0/16", "224.0.0.0/4", "0.0.0.0/8", "240.0.0.0/4"]
+        self.default_allowlist: List[str] = ["192.168.0.0/16", "10.0.0.0/8", "172.16.0.0/12"]
+        self.default_denylist: List[str] = ["127.0.0.0/8", "169.254.0.0/16", "224.0.0.0/4"]
 
 
 # Global settings instance
