@@ -42,6 +42,7 @@ class Settings:
         self.default_blocked_ranges: List[str] = ["127.0.0.0/8", "169.254.0.0/16", "224.0.0.0/4", "0.0.0.0/8", "240.0.0.0/4"]
         self.default_allowlist: List[str] = ["192.168.0.0/16", "10.0.0.0/8", "172.16.0.0/12"]
         self.default_denylist: List[str] = ["127.0.0.0/8", "169.254.0.0/16", "224.0.0.0/4"]
+        self.allowed_broadcast_ranges: List[str] = ["192.168.0.0/16", "10.0.0.0/8", "172.16.0.0/12"]
 
 
 # Global settings instance
