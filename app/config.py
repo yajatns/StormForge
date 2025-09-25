@@ -47,3 +47,8 @@ class Settings:
 
 # Global settings instance
 settings = Settings()
+
+
+def get_config() -> Settings:
+    """Get the global settings instance"""
+    return settings
