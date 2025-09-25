@@ -4,11 +4,11 @@ Database configuration and session management
 
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine, async_sessionmaker
 from sqlalchemy.orm import DeclarativeBase
-import structlog
+import logging
 
 from app.config import settings
 
-logger = structlog.get_logger()
+logger = logging.getLogger(__name__)
 
 # Create async engine
 engine = create_async_engine(

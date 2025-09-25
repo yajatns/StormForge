@@ -29,7 +29,7 @@ class Settings:
         self.api_key_expire_days: int = 365
         
         # Database
-        self.database_url: str = os.getenv("DATABASE_URL", "sqlite:///./data/orchestrator.db")
+        self.database_url: str = os.getenv("DATABASE_URL", "sqlite+aiosqlite:///./data/orchestrator.db")
         self.database_echo: bool = os.getenv("DATABASE_ECHO", "false").lower() == "true"
         
         # Hping3
