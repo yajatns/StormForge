@@ -5,7 +5,7 @@ A secure, web-based tool for orchestrating controlled hping3 traffic generation
 with comprehensive monitoring, RBAC, and safety controls.
 """
 
-from pydantic_settings import BaseSettings
+from pydantic import BaseSettings
 from typing import List, Optional
 import os
 
