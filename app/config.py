@@ -1,5 +1,5 @@
 """
-Hping3 Traffic Orchestrator
+StormForge Traffic Orchestrator
 
 A secure, web-based tool for orchestrating controlled hping3 traffic generation
 with comprehensive monitoring, RBAC, and safety controls.
@@ -14,7 +14,7 @@ class Settings(BaseSettings):
     """Application configuration settings"""
     
     # Application
-    app_name: str = "Hping3 Traffic Orchestrator"
+    app_name: str = "StormForge Traffic Orchestrator"
     app_version: str = "1.0.0"
     debug: bool = False
     

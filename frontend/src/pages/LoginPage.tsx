@@ -73,7 +73,7 @@ const LoginPage: React.FC = () => {
         >
           <Box textAlign="center" mb={4}>
             <Typography variant="h4" component="h1" gutterBottom sx={{ fontWeight: 600 }}>
-              Hping3 Traffic Orchestrator
+              StormForge
             </Typography>
             <Typography variant="body1" color="textSecondary">
               Secure Network Traffic Generation Platform

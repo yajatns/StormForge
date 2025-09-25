@@ -1,7 +1,7 @@
 {
-  "name": "hping3-orchestrator-ui",
+  "name": "stormforge-ui",
   "version": "1.0.0",
-  "description": "React frontend for hping3 Traffic Orchestrator",
+  "description": "React frontend for StormForge Traffic Orchestrator",
   "private": true,
   "dependencies": {
     "@types/node": "^20.8.0",

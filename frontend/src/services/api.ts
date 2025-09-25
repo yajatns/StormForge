@@ -6,7 +6,7 @@ export interface ApiConfig {
 }
 
 class ApiClient {
-  private client: AxiosInstance;
+  public client: AxiosInstance;
 
   constructor(config: ApiConfig) {
     this.client = axios.create({

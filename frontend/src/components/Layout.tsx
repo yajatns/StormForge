@@ -71,7 +71,7 @@ const Layout: React.FC = () => {
     <div>
       <Toolbar>
         <Typography variant="h6" noWrap component="div" sx={{ fontWeight: 600 }}>
-          Hping3 Orchestrator
+          StormForge
         </Typography>
       </Toolbar>
       <Divider />
