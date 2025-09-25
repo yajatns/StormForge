@@ -5,9 +5,21 @@ Job model
 from sqlalchemy import Column, String, Integer, Boolean, DateTime, Text, JSON, ForeignKey
 from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
+from enum import Enum
 import uuid
 
 from app.db.database import Base
+
+
+class JobStatus(str, Enum):
+    """Job status enumeration"""
+    QUEUED = "queued"
+    STARTING = "starting"
+    RUNNING = "running"
+    STOPPING = "stopping"
+    COMPLETED = "completed"
+    FAILED = "failed"
+    CANCELLED = "cancelled"
 
 
 class Job(Base):
