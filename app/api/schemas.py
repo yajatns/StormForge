@@ -156,7 +156,7 @@ class QuotaSettings(BaseModel):
 class UserCreateRequest(BaseModel):
     """User creation request"""
     username: str = Field(..., min_length=3, max_length=50)
-    email: str = Field(..., regex=r'^[^@]+@[^@]+\.[^@]+$')
+    email: str = Field(..., pattern=r'^[^@]+@[^@]+\.[^@]+$')
     password: str = Field(..., min_length=8)
     role: UserRole = UserRole.OPERATOR
     quotas: QuotaSettings = Field(default_factory=QuotaSettings)
