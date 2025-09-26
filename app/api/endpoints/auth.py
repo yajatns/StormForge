@@ -132,7 +132,7 @@ async def create_user(
 async def create_api_key(
     key_request: ApiKeyCreateRequest,
     db: AsyncSession = Depends(get_db),
-    auth: AuthContext = Depends(RequireAdmin)
+    auth: AuthContext = RequireAdmin
 ):
     """Create a new API key"""
     
