@@ -38,6 +38,10 @@ class Settings:
         self.default_timeout: int = int(os.getenv("DEFAULT_TIMEOUT", "30"))
         self.max_targets_per_job: int = 100
         
+        # Logging
+        self.log_level: str = os.getenv("LOG_LEVEL", "INFO")
+        self.log_format: str = os.getenv("LOG_FORMAT", "json")
+        
         # Network Security
         self.default_blocked_ranges: List[str] = ["127.0.0.0/8", "169.254.0.0/16", "224.0.0.0/4", "0.0.0.0/8", "240.0.0.0/4"]
         self.default_allowlist: List[str] = ["192.168.0.0/16", "10.0.0.0/8", "172.16.0.0/12"]
