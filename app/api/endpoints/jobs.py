@@ -26,7 +26,7 @@ async def create_job(
     job_request: JobCreateRequest,
     request: Request,
     db: AsyncSession = Depends(get_db),
-    auth: AuthContext = Depends(RequireJobWrite)
+    auth: AuthContext = RequireJobWrite
 ):
     """Create and start a new hping3 job"""
     
@@ -108,7 +108,7 @@ async def create_job(
 @router.get("/", response_model=JobListResponse)
 async def list_jobs(
     db: AsyncSession = Depends(get_db),
-    auth: AuthContext = Depends(RequireJobRead),
+    auth: AuthContext = RequireJobRead,
     status_filter: Optional[List[str]] = Query(None),
     limit: int = Query(50, ge=1, le=1000),
     offset: int = Query(0, ge=0),
@@ -173,7 +173,7 @@ async def list_jobs(
 async def get_job(
     job_id: str,
     db: AsyncSession = Depends(get_db),
-    auth: AuthContext = Depends(RequireJobRead)
+    auth: AuthContext = RequireJobRead
 ):
     """Get job details by ID"""
     
@@ -230,7 +230,7 @@ async def stop_job(
     job_id: str,
     stop_request: JobStopRequest = JobStopRequest(),
     db: AsyncSession = Depends(get_db),
-    auth: AuthContext = Depends(RequireJobWrite)
+    auth: AuthContext = RequireJobWrite
 ):
     """Stop a running job"""
     
@@ -337,7 +337,7 @@ async def stop_all_jobs(
 async def get_job_logs(
     job_id: str,
     db: AsyncSession = Depends(get_db),
-    auth: AuthContext = Depends(RequireJobRead),
+    auth: AuthContext = RequireJobRead,
     tail: int = Query(100, ge=1, le=10000)
 ):
     """Get job logs (stdout/stderr)"""
