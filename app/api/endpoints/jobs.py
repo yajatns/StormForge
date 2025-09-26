@@ -306,7 +306,7 @@ async def stop_job(
 @router.post("/stop-all")
 async def stop_all_jobs(
     db: AsyncSession = Depends(get_db),
-    auth: AuthContext = Depends(RequireAuth)
+    auth: AuthContext = RequireAuth
 ):
     """Emergency stop all jobs (admin only)"""
     
